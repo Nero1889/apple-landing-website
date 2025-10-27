@@ -11,7 +11,7 @@ Title: macbook pro M3 16 inch 2024
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function MackbookModel(props) {
   const { nodes, materials } = useGLTF('/model/macbook-transformed.glb')
   return (
     <group {...props} dispose={null}>
@@ -38,4 +38,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/model/macbook-transformed.glb')
+useGLTF.preload('/model/macbook-transformed.glb');
