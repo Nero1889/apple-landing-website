@@ -12,7 +12,7 @@ import React from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
 
 export default function MacbookModel16(props) {
-  const { nodes, materials } = useGLTF('/model/macbook-16-transformed.glb');
+  const { nodes, materials } = useGLTF('/models/macbook-16-transformed.glb');
 
   const texture = useTexture("/screen.png");
 
@@ -43,4 +43,4 @@ export default function MacbookModel16(props) {
   )
 }
 
-useGLTF.preload('/model/macbook-16-transformed.glb');
+useGLTF.preload('/models/macbook-16-transformed.glb');
