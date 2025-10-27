@@ -25,15 +25,7 @@ const moveGroup = (group, x) => {
     gsap.to(group.position, {x, duration: ANIMATION_DURATION});
 }
 
-const controlsConfig = {
-    snap: true,
-    speed: 1,
-    zoom: 1,
-    azimuth: [-Infinity, Infinity],
-    config: {mass: 1, tension: 0, friction: 26}
-}
-
-function ModelSwitcher({scale, isMobile}) {
+function ModelSwitcher({scale, isMobile}) {    
     const smallMacbookRef = useRef();
     const largeMacbookRef = useRef();
 
@@ -45,15 +37,23 @@ function ModelSwitcher({scale, isMobile}) {
             moveGroup(largeMacbookRef.current, 0);
     
             fadeMeshes(smallMacbookRef.current, 0);
-            fadeMeshes(smallMacbookRef.current, 1);
+            fadeMeshes(largeMacbookRef.current, 1);
         } else {
             moveGroup(smallMacbookRef.current, 0);
             moveGroup(largeMacbookRef.current, OFFSET_DISTANCE);
     
             fadeMeshes(smallMacbookRef.current, 1);
-            fadeMeshes(smallMacbookRef.current, 0);
+            fadeMeshes(largeMacbookRef.current, 0);
         }
     }, [scale]);
+
+    const controlsConfig = {
+        snap: true,
+        speed: 1,
+        zoom: 1,
+        azimuth: [-Infinity, Infinity],
+        config: {mass: 1, tension: 0, friction: 26}
+    }
 
     return (
         <>
