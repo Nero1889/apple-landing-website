@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-/* =======================================
-        Imported Utility Classes and Styles
-======================================= */
+/* =========================================
+    Imported Utility Classes and Styles
+========================================= */
 
 @font-face {
     font-family: "Regular";
@@ -434,4 +434,5 @@ body {
             }
         }
     }
+
 }
