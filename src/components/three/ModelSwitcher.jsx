@@ -14,7 +14,7 @@ const fadeMeshes = (group, opacity) => {
     group.traverse((child) => {
         if (child.isMesh) {
             child.material.transparent = true;
-            gsap.to(child.material, { opacity, duration: ANIMATION_DURATION })
+            gsap.to(child.material, {opacity, duration: ANIMATION_DURATION});
         }
     })
 }
@@ -22,7 +22,7 @@ const fadeMeshes = (group, opacity) => {
 const moveGroup = (group, x) => {
     if (!group) return;
 
-    gsap.to(group.position, {x, duration: ANIMATION_DURATION})
+    gsap.to(group.position, {x, duration: ANIMATION_DURATION});
 }
 
 const ModelSwitcher = ({scale, isMobile}) => {
@@ -72,7 +72,7 @@ const ModelSwitcher = ({scale, isMobile}) => {
                 </group>
             </PresentationControls>
         </>
-    )
+    );
 }
 
 export default ModelSwitcher;
